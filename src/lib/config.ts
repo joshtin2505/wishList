@@ -1,0 +1,6 @@
+export const {
+  SEED_DATA_USERNAME,
+  SEED_DATA_PASSWORD,
+  SEED_DATA_EMAIL,
+  SEED_DATA_NICKNAME,
+} = process.env;
