@@ -9,13 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/db": "^0.15.0",
     "@astrojs/vercel": "^8.2.0",
+    "@supabase/supabase-js": "^2.50.0",
+    "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.10.0",
-    "bcryptjs": "^3.0.2"
-  },
-  "devDependencies": {
-    "@types/pg": "^8.15.4"
+    "tailwindcss": "^4.1.10"
   },
   "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
 }
