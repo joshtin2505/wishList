@@ -1,8 +1,32 @@
 ---
+import { getWishList, type Wish } from '@/lib'
 import MainLayout from '@pages/layout.astro'
+
+let wishes: Wish[] = []
+let loading: boolean 
+try {
+loading = true
+  const {data} = await getWishList()
+  wishes = data ?? []
+} catch (error) {
+  wishes = []
+  console.error('Error fetching wish list:', error)
+} finally {
+	loading = false
+}
+
 ---
 
 <MainLayout title='WishList Main Page'>
 	<h1>Hello wishlist</h1>
-	
+	{!loading ? wishes.map((wish)=> {
+		return (
+			<div class="wishlist-item">
+				<p>{wish.title}</p>
+				<p>{wish.subtitle}</p>
+			</div>
+		)
+	}): (
+		<p>Loading...</p>
+	)}
 </MainLayout>
